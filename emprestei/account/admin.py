@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import Acc, SecurityQuestion, Stts
+from .models import Acc, Stts
 
 # Register your models here.
 
 admin.site.register(Stts)
-admin.site.register(SecurityQuestion)
 admin.site.register(Acc)
