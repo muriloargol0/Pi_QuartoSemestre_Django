@@ -18,10 +18,12 @@ from django.conf.urls import include
 from django.urls import path
 from rest_framework import routers
 from account.api.viewsets import AccViewSet
+from loan.api.viewsets import LoanViewSet
 
 router = routers.DefaultRouter()
 
 router.register(r'account', AccViewSet)
+router.register(r'loan', LoanViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
