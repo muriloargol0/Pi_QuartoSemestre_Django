@@ -9,11 +9,15 @@ class LoanViewSet(ModelViewSet):
     def get_queryset(self):
         print('entrou')
         user = self.request.query_params.get('user', None)
+        loan = self.request.query_params.get('loan', None)
         
         queryset = Loan.objects.all()
         
         if(id):
-            queryset = queryset.filter(acc_id = user)            
+            queryset = queryset.filter(acc_id = user) 
+        
+        if(loan):
+            queryset = queryset.filter(id = loan)
             
         return queryset
         
