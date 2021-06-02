@@ -15,6 +15,6 @@ class Loan(models.Model):
         verbose_name_plural = "Loan"
         
     def __str__(self):
-        return self.id
+        return self.loan_to_name
 
 

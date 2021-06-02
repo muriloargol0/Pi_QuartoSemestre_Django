@@ -19,13 +19,16 @@ from django.urls import path
 from rest_framework import routers
 from account.api.viewsets import AccViewSet
 from loan.api.viewsets import LoanViewSet
+from authenticate.api.viewsets import AuthenticateViewSet
+
 
 router = routers.DefaultRouter()
 
 router.register(r'account', AccViewSet)
 router.register(r'loan', LoanViewSet)
+router.register(r'authenticate', AuthenticateViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls)
 ]
