@@ -7,7 +7,7 @@ class Loan(models.Model):
     loan_description = models.CharField(max_length=200, default='')
     loan_date = models.DateField(blank=False)
     loan_observation = models.CharField(blank = False, max_length = 200)
-    loan_return_date = models.DateField(blank=False)
+    loan_return_date = models.DateField(blank=True, null=True)
     loan_estimated_value = models.DecimalField(max_digits=6, decimal_places=2)
 	
     class Meta:
